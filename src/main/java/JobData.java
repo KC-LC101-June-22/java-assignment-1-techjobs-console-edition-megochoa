@@ -97,6 +97,7 @@ public class JobData {
 
         // TODO - implement this method
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+
             for (HashMap<String, String> row : allJobs){
                 for(Map.Entry<String, String> someJob : row.entrySet()){
                     if (someJob.getValue().toUpperCase().contains(value) && !jobs.contains(row)){
@@ -104,11 +105,8 @@ public class JobData {
                     }
                 }
             }
-            //printJobs for reference:
-//        for (Map.Entry<String, String> someJob : jobs.entrySet()) {
-//            System.out.println(someJob.getKey() + ": " + someJob.getValue());
-//        }
-        return null;
+
+        return jobs;
     }
 
     /**
